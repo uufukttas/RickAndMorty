@@ -50,7 +50,22 @@
 }
 
 /* Style your items */
-.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
-  background: grey;
-  margin-bottom: 30px;
+.my-masonry-grid_column > a { /* change div to reference your elements you put in <Masonry> */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.my-masonry-grid_column a {
+  display: block;
+  padding: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.my-masonry-grid_column  a:hover {
+  color: #000;
+  text-decoration: underline;
 }
