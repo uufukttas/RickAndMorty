@@ -33,10 +33,10 @@ export const Home = () => {
             <Masonry breakpointCols={3} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {
                     characters.items.map((character) => (
-                        <div key={character.id}>
+                        <>
                             <img src={character.image} alt={character.name} />
                             <p>{character.name}</p>
-                        </div>
+                        </>
                     ))
                 }
             </Masonry>
