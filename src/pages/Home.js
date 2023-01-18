@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCharacters } from "../redux/charactersSlice";
+import { Link } from "react-router-dom";
 import Masonry from "react-masonry-css";
-import '../App.css';
 import Loading from "../components/Loading";
 import Error from "../components/Error";
-import { Link } from "react-router-dom";
+import '../App.css';
 
 export const Home = () => {
     const characters = useSelector(state => state.characters);
     const isLoading = useSelector(state => state.isLoading);
     const message = useSelector(state => state.error);
-
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -25,7 +24,6 @@ export const Home = () => {
     if (message) {
         return <Error message={message} />
     }
-
 
     return (
         <div>
