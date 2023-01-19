@@ -25,13 +25,15 @@ export const Home = () => {
         return <Error message={message} />
     }
 
+    const createSlug = (name) => name.split(' ').join('_');
+
     return (
         <div>
             <h2>Characters</h2>
             <Masonry breakpointCols={3} className="my-masonry-grid" columnClassName="my-masonry-grid_column">
                 {
                     characters.items.map((character) => (
-                        <Link to="/">
+                        <Link to={`/${createSlug(character.name)}`}>
                             <img src={character.image} alt={character.name} />
                             <p>{character.name}</p>
                         </Link>
